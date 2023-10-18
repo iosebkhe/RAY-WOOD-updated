@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "flaticon";
+  src: url("../fonts/flaticon.ttf?7562f6434ac08a67ae85d20d64753b31")
+      format("truetype"),
+    url("../fonts/flaticon.woff?7562f6434ac08a67ae85d20d64753b31")
+      format("woff"),
+    url("../fonts/flaticon.woff2?7562f6434ac08a67ae85d20d64753b31")
+      format("woff2"),
+    url("../fonts/flaticon.eot?7562f6434ac08a67ae85d20d64753b31#iefix")
+      format("embedded-opentype"),
+    url("../fonts/flaticon.svg?7562f6434ac08a67ae85d20d64753b31#flaticon")
+      format("svg");
+}
+
+[class^="ot-flaticon-"]:before,
+[class*=" ot-flaticon-"]:before,
+[class^="ot-flaticon-"]:after,
+[class*=" ot-flaticon-"]:after {
+  font-family: flaticon !important;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.ot-flaticon-loupe:before {
+  content: "\f101";
+}
+.ot-flaticon-mail:before {
+  content: "\f102";
+}
+.ot-flaticon-shopping-bag:before {
+  content: "\f103";
+}
+.ot-flaticon-facebook:before {
+  content: "\f104";
+}
+.ot-flaticon-instagram:before {
+  content: "\f105";
+}
+.ot-flaticon-dribbble:before {
+  content: "\f106";
+}
+.ot-flaticon-check:before {
+  content: "\f107";
+}
+.ot-flaticon-link:before {
+  content: "\f108";
+}
+.ot-flaticon-arrow-point-to-right:before {
+  content: "\f109";
+}
+.ot-flaticon-close:before {
+  content: "\f10a";
+}
+.ot-flaticon-play:before {
+  content: "\f10b";
+}
+.ot-flaticon-menu-of-three-lines:before {
+  content: "\f10c";
+}
+.ot-flaticon-pinterest:before {
+  content: "\f10d";
+}
+.ot-flaticon-vk:before {
+  content: "\f10e";
+}
+.ot-flaticon-vimeo:before {
+  content: "\f10f";
+}
+.ot-flaticon-reddit:before {
+  content: "\f110";
+}
+.ot-flaticon-github:before {
+  content: "\f111";
+}
+.ot-flaticon-behance:before {
+  content: "\f112";
+}
+.ot-flaticon-quote:before {
+  content: "\f113";
+}
+.ot-flaticon-arrowhead-thin-outline-to-the-left:before {
+  content: "\f114";
+}
+.ot-flaticon-arrow-slider:before {
+  content: "\f115";
+}
+.ot-flaticon-plus-sign:before {
+  content: "\f116";
+}
+.ot-flaticon-minus:before {
+  content: "\f117";
+}
+.ot-flaticon-linkedin:before {
+  content: "\f118";
+}
+.ot-flaticon-youtube:before {
+  content: "\f119";
+}
+.ot-flaticon-tick:before {
+  content: "\f11a";
+}
+.ot-flaticon-check-1:before {
+  content: "\f11b";
+}
+.ot-flaticon-twitter:before {
+  content: "\f11c";
+}
+.ot-flaticon-next:before {
+  content: "\f11d";
+}
+.ot-flaticon-clock:before {
+  content: "\f11e";
+}
+.ot-flaticon-arow:before {
+  content: "\f11f";
+}
+.ot-flaticon-bubble-chat:before {
+  content: "\f120";
+}
+.ot-flaticon-right-arrow:before {
+  content: "\f121";
+}
+.ot-flaticon-left-arrow:before {
+  content: "\f122";
+}
+.ot-flaticon-user:before {
+  content: "\f123";
+}
+.ot-flaticon-right-up:before {
+  content: "\f124";
+}
