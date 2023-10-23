@@ -44,9 +44,6 @@
                 <div class="">
                   <nav id="site-navigation" class="main-navigation categories-nav">
                     <ul class="menu">
-                      <li class="current-menu-item">
-                        <a href="./index.html">მთავარი</a>
-                      </li>
                       <!-- კოტეჯები -->
                       <li class="menu-item-has-children">
                         <a data-category="კოტეჯები" href="#">კოტეჯები</a>
@@ -133,7 +130,7 @@
                       </li>
                       <!-- ხის აქსესუარები -->
                       <li class="menu-item-has-children">
-                        <a data-category="ხის აქსესუარები" href="#">ხის
+                        <a data-category="ხის აქსესუარები" href="./productList.html">ხის
                           აქსესუარები</a>
                         <ul class="sub-menu">
                           <li>
@@ -152,6 +149,10 @@
                             <a data-category="ტკეჩი" href="./productList.html">ტკეჩი</a>
                           </li>
                         </ul>
+                      </li>
+                      <!-- პალეტები -->
+                      <li class="">
+                        <a data-category="პალეტები" href="./productList.html">პალეტები</a>
                       </li>
                     </ul>
                   </nav>
@@ -188,9 +189,6 @@
                     <a class="mmenu-close" href="#"><i class="ot-flaticon-next"></i></a>
                     <div class="mobile-nav categories-nav">
                       <ul class="mobile_mainmenu none-style">
-                        <li class="menu-item-has-children current-menu-item">
-                          <a href="./index.html">მთავარი</a>
-                        </li>
                         <!-- კოტეჯები - მობ -->
                         <li class="menu-item-has-children">
                           <a data-category="კოტეჯები" href="./productList.html">
@@ -297,6 +295,10 @@
                             </li>
                           </ul>
                         </li>
+                        <!-- პალეტები -->
+                        <li class="">
+                          <a data-category="პალეტები" href="./productList.html">პალეტები</a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -309,15 +311,94 @@
     </header>
 
     <div id="content" class="site-content woocommerce product-list-container">
-      <div class="page-header text-center page-header-contact" style="display: block !important;">
-        <div class="" style="height:  100%;">
-          <div class="container" style="height: 100%;">
-            <div class="page-header-content owl-carousel"
-                 style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
-              <h2 class="page-title">უმაღლესი ხარისხი</h2>
-              <h2 class="page-title">პროფესიონალების გუნდი</h2>
-              <h2 class="page-title">სწრაფი მომხსახურება</h2>
-              <h2 class="page-title">კონტაქტი</h2>
+      <div class="owl-carousel">
+        <!-- კოტეჯები სლაიდერ -->
+        <div class="page-header text-center page-header-koteji" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="კოტეჯები" href="./productList.html">
+                    კოტეჯები
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ევროვაგონკა სლაიდერი -->
+        <div class="page-header text-center page-header-evrovagonka" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="ევროვაგონკა/შწილი" href="./productList.html">
+                    ევროვაგონკა
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- მშრალი ფიცარი სლაიდერი -->
+        <div class="page-header text-center page-header-ficari" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="მშრალი ფიცარი" href="./productList.html">
+                    მშრალი ფიცარი
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ხის ფასადი სლაიდერი -->
+        <div class="page-header text-center page-header-fasadi" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="ხის ფასადი" href="./productList.html">
+                    ხის ფასადი
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- აქსესუარები სლაიდერი -->
+        <div class="page-header text-center page-header-aqsesurebi" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="ხის აქსესურები" href="./productList.html">
+                    აქსესუარები
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- პალეტი სლაიდერი -->
+        <div class="page-header text-center page-header-paleti" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="პალეტები" href="./productList.html">
+                    პალეტები
+                  </a>
+                </h2>
+              </div>
             </div>
           </div>
         </div>
@@ -482,6 +563,10 @@
                       </div>
                     </div>
                   </li>
+                  <li class="menu-item-has-children accordion-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <a data-category="პალეტები" href="./productList.html">პალეტები</a>
+                  </li>
                 </ul>
               </aside>
               <hr class="my-0 mb-lg-4">
@@ -520,9 +605,7 @@
                   <p class="woocommerce-result-count m-0">
                     მოიძებნა <span class="product-count-num">1</span> პროდუქტი
                   </p>
-                  <!-- <h1 class="productDetails-title m-0 p-0"
-                      style="font-weight: 700; font-size: 20px; line-height: 24px;">
-                    პროდუქტის სახელი</h1> -->
+
                   <select id="sortSelect" class="p-2 rounded">
                     <option value="">ფასით დალაგება</option>
                     <option value="price-low-to-high">ფასი ზრდადი</option>
@@ -531,7 +614,9 @@
                 </div>
               </div>
               <!-- პროდუქტების დივი დასაწყისი -->
-              <div class="products"></div>
+              <div class="products">
+
+              </div>
               <!-- პროდუქტების დივი დამთავრება -->
             </div>
           </div>
@@ -661,8 +746,7 @@
       $('.owl-carousel').owlCarousel({
         loop: true,
         autoplay: true,
-        autoplayTimeout: 5000,
-        margin: 20,
+        autoplayTimeout: 4000,
         items: 1,
         dots: false,
         responsive: {
@@ -681,8 +765,7 @@
         }
       });
     });
-  </script>
-  <script>
+
     window.jQuery = window.$ = jQuery;
     (function ($) {
       "use strict";
@@ -697,7 +780,6 @@
       });
     })(jQuery);
   </script>
-
 </body>
 
 </html>

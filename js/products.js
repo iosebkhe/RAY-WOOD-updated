@@ -27,6 +27,20 @@ const handleNavigationLinks = async function () {
 };
 handleNavigationLinks();
 
+// Render Loader HTML
+const Loader = function () {
+  return `<div class="dot-spinner">
+  <div class="dot-spinner__dot"></div>
+  <div class="dot-spinner__dot"></div>
+  <div class="dot-spinner__dot"></div>
+  <div class="dot-spinner__dot"></div>
+  <div class="dot-spinner__dot"></div>
+  <div class="dot-spinner__dot"></div>
+  <div class="dot-spinner__dot"></div>
+  <div class="dot-spinner__dot"></div>
+</div>`;
+};
+
 // Function to render product list HTML
 const renderProductListHTML = function (products, productsLength) {
 
@@ -127,14 +141,30 @@ const linkEventListeners = function (renderContainer, products) {
 const populateProductList = async function () {
   const selectedProductCategory = localStorage.getItem('selectedProductCategory');
   const productListEl = document.querySelector('.products');
+
+
+  const productCountAndSort = document.querySelector('#product-count-and-sort');
+  productCountAndSort.style.display = "none";
+
+
+  // Step 1: Create a loader element
+  const loader = document.createElement('div');
+  loader.innerHTML = Loader(); // Use the Loader function to create the loader HTML
+  loader.classList.add('loader');
+
   try {
+    // Step 2: Append the loader to the container
+    productListEl.appendChild(loader);
+
     if (selectedProductCategory === 'კატალოგი') {
+      // productCountAndSort.style.display = "flex";
       const apiUrlProduct = 'https://ecommerce-admin-master-tau.vercel.app/api/products';
       const dataProducts = await fetchProduct(apiUrlProduct);
       const allProductsLength = dataProducts.length;
       productListEl.innerHTML = renderProductListHTML(dataProducts, allProductsLength);
       linkEventListeners(productListEl, dataProducts);
     } else {
+      // productCountAndSort.style.display = "flex";
       const apiProductsCategory = `https://ecommerce-admin-master-tau.vercel.app/api/products?category=${selectedProductCategory}`;
       const productByCategory = await fetchProduct(apiProductsCategory);
       const productByCategoryLength = productByCategory.length;
@@ -143,8 +173,89 @@ const populateProductList = async function () {
     }
   } catch (error) {
     console.error(error.message);
+  } finally {
+    // Step 3: Remove the loader after the data is fetched
+    productCountAndSort.style.display = "flex";
+    const loaderElement = productListEl.querySelector('.loader');
+    if (loaderElement) {
+      productListEl.removeChild(loaderElement);
+    }
   }
 };
+
+
+//პროდუქტების ძებნა და დალაგება ფასის მიხედვით
+const searchAndSortProducts = async function (sortOption, searchTerm) {
+  const productListEl = document.querySelector(".products");
+
+  try {
+    const apiUrlProduct = "https://ecommerce-admin-master-tau.vercel.app/api/products";
+    const data = await fetchProduct(apiUrlProduct);
+
+    // გაფილტვრა საძებნი სიტყვით და კატეგორიით
+    const relevantProducts = data.filter(product =>
+      product.title.toLowerCase().includes(searchTerm)
+    );
+
+    // დალაგება ფასის მიხედვით
+    if (sortOption === 'price-low-to-high') {
+      relevantProducts.sort((a, b) => {
+        const priceA = +a.discountedPrice ? +a.discountedPrice : +a.price;
+        const priceB = +b.discountedPrice ? +b.discountedPrice : +b.price;
+        return priceA - priceB;
+      });
+    } else if (sortOption === 'price-high-to-low') {
+      relevantProducts.sort((a, b) => {
+        const priceA = +a.discountedPrice ? +a.discountedPrice : +a.price;
+        const priceB = +b.discountedPrice ? +b.discountedPrice : +b.price;
+        return priceB - priceA;
+      });
+    }
+
+    // გამოიტანე შესაბამისი პროდუქტები ან "მოიძებნა 0 პროდუქტი"
+    if (relevantProducts.length > 0) {
+      const productListHTML = renderProductListHTML(relevantProducts, relevantProducts.length);
+      productListEl.innerHTML = productListHTML;
+    }
+
+  } catch (error) {
+    console.error(error.message);
+  }
+};
+
+// Attach event listener to the sorting select element and the search form
+const sortSelect = document.querySelector('#sortSelect');
+const form = document.querySelector('#search-form');
+const category = localStorage.getItem("selectedProductCategory");
+
+if (form) {
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Get the search input value
+    const searchInput = form.querySelector('.search-field');
+    const searchTerm = searchInput.value.toLowerCase();
+
+    // Get the selected sort option
+    const sortOption = sortSelect.value;
+
+    // Call the combined search and sort function
+    searchAndSortProducts(sortOption, searchTerm);
+  });
+
+  // Call the combined function on sorting select change as well
+  sortSelect.addEventListener('change', function () {
+    const sortOption = sortSelect.value;
+
+    // Get the current search input value
+    const searchInput = form.querySelector('.search-field');
+    const searchTerm = searchInput.value.toLowerCase();
+
+    // Call the combined search and sort function
+    searchAndSortProducts(sortOption, searchTerm, category);
+  });
+}
+
 
 // Function to populate product details
 const populateProductDetails = async function () {
@@ -187,7 +298,10 @@ const populateProductDetails = async function () {
       
              <div class="col-lg-6">
                <div class="summary entry-summary">
-               <p class="price">
+               <h1 class="mb-0" style="font-size:24px; line-height:normal;">
+               ${selectedProduct.title}
+               </h1>
+               <p class="price my-2 mt-3">
                  ${selectedProduct.hasDiCount ? `
                  <span aria-hidden="true">
                    <span class="woocommerce-Price-amount amount">
@@ -285,7 +399,7 @@ const populateProductDetails = async function () {
            <div class="row mt-5">
              <div class="col-md-12">
                <div class="ot-tabs tab-single-product">
-                 <ul class="ot-tabs__heading unstyle d-inline-block">
+                 <ul class="ot-tabs__heading unstyle d-inline-block" style="overflow: visible;">
                    <li class="tab-link is-line current" data-tab="tab-1">
                      პროდუქტის აღწერა
                    </li>
@@ -387,6 +501,7 @@ const initializePage = async function () {
   if (selectedProductCategory) {
     activeLinkHandler(selectedProductCategory);
     pageTitleAndBreadcrumbsHandler(selectedProductCategory);
+    searchAndSortProducts();
 
     if (window.location.pathname.includes('productList.html')) {
       populateProductList();

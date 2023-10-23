@@ -295,24 +295,6 @@
 
 })(jQuery);
 
-
-const autoplayVideo = function () {
-  if (window.location.pathname === "/productList.html" || window.location.pathname === "/productDetails.html") return;
-  const videoEl = document.querySelector(".video-box video");
-  videoEl.muted = true;
-  if (typeof videoEl.loop == 'boolean') { // loop supported
-    videoEl.loop = true;
-  } else {
-    // loop property not supported
-    videoEl.addEventListener('ended', function () {
-      this.currentTime = 0;
-      this.play();
-    }, false);
-  }
-  videoEl.play();
-};
-autoplayVideo();
-
 const accordionHandler = function () {
   if (window.location.pathname === "/productList.html") {
     const accordionEl = document.querySelector(".accordion");

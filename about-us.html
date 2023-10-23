@@ -42,9 +42,6 @@
                 <div class="">
                   <nav id="site-navigation" class="main-navigation categories-nav">
                     <ul class="menu">
-                      <li class="current-menu-item">
-                        <a href="./index.html">მთავარი</a>
-                      </li>
                       <!-- კოტეჯები -->
                       <li class="menu-item-has-children">
                         <a data-category="კოტეჯები" href="#">კოტეჯები</a>
@@ -151,6 +148,10 @@
                           </li>
                         </ul>
                       </li>
+                      <!-- პალეტები -->
+                      <li class="">
+                        <a data-category="პალეტები" href="./productList.html">პალეტები</a>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -178,20 +179,6 @@
                     <div class="toggle_search octf-cta-icons">
                       <i class="ot-flaticon-loupe"></i>
                     </div>
-                    <!-- Form Search on Header -->
-                    <div class="h-search-form-field">
-                      <div class="h-search-form-inner">
-                        <form role="search" method="get" class="search-form" action="">
-                          <label><span class="screen-reader-text">Search
-                              for:</span>
-                            <input type="search" class="search-field" placeholder="Search" value="" name="s" />
-                          </label>
-                          <button type="submit" class="search-submit">
-                            <i class="ot-flaticon-loupe"></i>
-                          </button>
-                        </form>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -207,38 +194,49 @@
                     <a class="mmenu-close" href="#"><i class="ot-flaticon-next"></i></a>
                     <div class="mobile-nav categories-nav">
                       <ul class="mobile_mainmenu none-style">
-                        <li class="menu-item-has-children current-menu-item">
-                          <a href="./index.html">მთავარი</a>
-                        </li>
+                        <!-- კოტეჯები - მობ -->
                         <li class="menu-item-has-children">
-                          <a data-categorymain="ევროვაგონკა/შწილი" href="#">ევროვაგონკა/შწილი</a>
+                          <a data-category="კოტეჯები" href="./productList.html">
+                            კოტეჯები
+                          </a>
                           <ul class="sub-menu">
                             <li>
-                              <a data-category="ევროვაგონკა A, Ab, C" href="./productList.html">
+                              <a data-category="მრგვალი მორით" href="./productList.html">
+                                მრგვალი მორით
+                              </a>
+                            </li>
+                            <li>
+                              <a data-category="შეწებილი ძელით" href="./productList.html">
+                                შეწებილი ძელით
+                              </a>
+                            </li>
+                            <li>
+                              <a data-category="კარკასული" href="./productList.html">
+                                კარკასული
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <!-- ევროვაგონკა შწილი - მობ -->
+                        <li class="menu-item-has-children">
+                          <a data-category="ევროვაგონკა/შწილი" href="./productList.html">
+                            ევროვაგონკა/შწილი
+                          </a>
+                          <ul class="sub-menu">
+                            <li>
+                              <a data-category="ევროვაგონკა" href="./productList.html">
                                 ევროვაგონკა A, AB, AC
                               </a>
                             </li>
                             <li>
-                              <a data-category="შწილი AB" href="./productList.html">შწილი
-                                AB</a>
+                              <a data-category="შწილი" href="./productList.html">შწილი AB</a>
                             </li>
                           </ul>
                         </li>
+                        <!-- მშრალი ფიცარი -->
                         <li class="menu-item-has-children">
-                          <a data-categorymain="ხის იატაკი" href="#">ხის იატაკი</a>
-                          <ul class="sub-menu">
-                            <li>
-                              <a data-category="სამშრიანი პარკეტი" href="./productList.html">სამშრიანი
-                                პარკეტი</a>
-                            </li>
-                            <li>
-                              <a data-category="იატაკის ფიცარი" href="./productList.html">იატაკის
-                                ფიცარი</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                          <a data-categorymain="მშრალი ფიცარი" href="#">მშრალი ფიცარი</a>
+                          <a data-category="მშრალი ფიცარი" href="#">მშრალი
+                            ფიცარი</a>
                           <ul class="sub-menu">
                             <li>
                               <a data-category="დახერხილი ფიცარი" href="./productList.html">დახერხილი
@@ -249,53 +247,62 @@
                                 ფიცარი</a>
                             </li>
                             <li>
-                              <a data-category="კოჭი - ბალკა" href="./productList.html">კოჭი
+                              <a data-category="იატაკის ფიცარი" href="./productList.html">
+                                იატაკის ფიცარი
+                              </a>
+                            </li>
+                            <li>
+                              <a data-category="კოჭი-ბალკა" href="./productList.html">კოჭი
                                 - ბალკა</a>
                             </li>
                           </ul>
                         </li>
+                        <!-- ხის ფასადი -->
                         <li class="menu-item-has-children">
-                          <a data-categorymain="ხის ფასადი" href="#">ხის ფასადი</a>
+                          <a data-category="ხის ფასადი" href="#">ხის
+                            ფასადი</a>
                           <ul class="sub-menu">
                             <li>
-                              <a data-category="დეკორატიული პანელი" href="./productList.html">დეკორატიული
-                                პანელი</a>
+                              <a data-category="დეკორატიული პანელი" href="./productList.html">
+                                დეკორატიული პანელი
+                              </a>
                             </li>
                             <li>
-                              <a data-category="ბლოკჰაუსი AB" href="./productList.html">ბლოკჰაუსი
+                              <a data-category="ბლოკჰაუსი" href="./productList.html">ბლოკჰაუსი
                                 AB</a>
                             </li>
                             <li>
-                              <a data-category="ბრუსის იმიტაცია AB" href="./productList.html">ბრუსის
-                                იმიტაცია AB</a>
+                              <a data-category="ძელის იმიტაცია" href="./productList.html">
+                                ძელის იმიტაცია AB
+                              </a>
                             </li>
                           </ul>
                         </li>
+                        <!-- ხის აქსესუარები -->
                         <li class="menu-item-has-children">
-                          <a data-categorymain="ხის აქსესუარები" href="#">ხის აქსესუარები</a>
+                          <a data-category="ხის აქსესუარები" href="#">ხის
+                            აქსესუარები</a>
                           <ul class="sub-menu">
                             <li>
-                              <a data-category="მაგიდის ზედაპირი" href="./productList.html">მაგიდის
-                                ზედაპირი</a>
-                            </li>
-                            <li>
-                              <a data-category="პლინტუსი" href="./productList.html">პლინტუსი</a>
-                            </li>
-                            <li>
-                              <a data-category="ძელაკი (რეიკა)" href="./productList.html">ძელაკი
-                                (რეიკა)</a>
+                              <a data-category="პლინტუსი" href="./productList.html">
+                                პლინტუსი
+                              </a>
                             </li>
                             <li>
                               <a data-category="კუთხოვანა" href="./productList.html">კუთხოვანა
                               </a>
                             </li>
                             <li>
-                              <a data-category="ნალიჩნიკი" href="./productList.html">"ნალიჩნიკი"</a>
+                              <a data-category="კარის ჩარჩო" href="./productList.html">კარის ჩარჩო</a>
                             </li>
                             <li>
                               <a data-category="ტკეჩი" href="./productList.html">ტკეჩი</a>
                             </li>
                           </ul>
+                        </li>
+                        <!-- პალეტები -->
+                        <li class="">
+                          <a data-category="პალეტები" href="./productList.html">პალეტები</a>
                         </li>
                       </ul>
                     </div>
@@ -309,15 +316,94 @@
     </header>
 
     <div id="content" class="site-content">
-      <div class="page-header text-center page-header-contact" style="display: block !important;">
-        <div class="" style="height:  100%;">
-          <div class="container" style="height: 100%;">
-            <div class="page-header-content owl-carousel"
-                 style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
-              <h2 class="page-title">უმაღლესი ხარისხი</h2>
-              <h2 class="page-title">პროფესიონალების გუნდი</h2>
-              <h2 class="page-title">სწრაფი მომხსახურება</h2>
-              <h2 class="page-title">კონტაქტი</h2>
+      <div class="owl-carousel">
+        <!-- კოტეჯები სლაიდერ -->
+        <div class="page-header text-center page-header-koteji" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="კოტეჯები" href="./productList.html">
+                    კოტეჯები
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ევროვაგონკა სლაიდერი -->
+        <div class="page-header text-center page-header-evrovagonka" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="ევროვაგონკა/შწილი" href="./productList.html">
+                    ევროვაგონკა
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- მშრალი ფიცარი სლაიდერი -->
+        <div class="page-header text-center page-header-ficari" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="მშრალი ფიცარი" href="./productList.html">
+                    მშრალი ფიცარი
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ხის ფასადი სლაიდერი -->
+        <div class="page-header text-center page-header-fasadi" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="ხის ფასადი" href="./productList.html">
+                    ხის ფასადი
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- აქსესუარები სლაიდერი -->
+        <div class="page-header text-center page-header-aqsesurebi" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="ხის აქსესურები" href="./productList.html">
+                    აქსესუარები
+                  </a>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- პალეტი სლაიდერი -->
+        <div class="page-header text-center page-header-paleti" style="display: block !important;">
+          <div class="" style="height:  100%;">
+            <div class="container" style="height: 100%;">
+              <div class="page-header-content"
+                   style="height: 100%; display: flex; align-items: center; justify-content: center; vertical-align: middle;">
+                <h2 class="page-title">
+                  <a data-category="პალეტები" href="./productList.html">
+                    პალეტები
+                  </a>
+                </h2>
+              </div>
             </div>
           </div>
         </div>
@@ -474,8 +560,7 @@
       $('.owl-carousel').owlCarousel({
         loop: true,
         autoplay: true,
-        autoplayTimeout: 5000,
-        margin: 20,
+        autoplayTimeout: 4000,
         items: 1,
         dots: false,
         responsive: {

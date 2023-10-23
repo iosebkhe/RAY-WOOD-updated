@@ -728,8 +728,26 @@
         background: "#085c40",
       });
     })(jQuery);
-  </script>
-  <script>
+
+
+    const autoplayVideo = function () {
+      if (window.location.pathname === "/productList.html" || window.location.pathname === "/productDetails.html") return;
+      const videoEl = document.querySelector(".video-box video");
+      videoEl.muted = true;
+      if (typeof videoEl.loop == 'boolean') { // loop supported
+        videoEl.loop = true;
+      } else {
+        // loop property not supported
+        videoEl.addEventListener('ended', function () {
+          this.currentTime = 0;
+          this.play();
+        }, false);
+      }
+      videoEl.play();
+    };
+    autoplayVideo();
+
+
     const scrollDownBtn = document.querySelector(".hero-scroll-down-btn");
     scrollDownBtn.addEventListener("click", () => {
       const heroEl = document.querySelector(".hero-video").offsetHeight - window.scrollY;
