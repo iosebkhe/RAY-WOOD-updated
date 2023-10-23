@@ -158,14 +158,14 @@ const populateProductList = async function () {
 
     if (selectedProductCategory === 'კატალოგი') {
       // productCountAndSort.style.display = "flex";
-      const apiUrlProduct = 'https://ecommerce-admin-master-tau.vercel.app/api/products';
+      const apiUrlProduct = 'https://raywood-admin.vercel.app/api/products';
       const dataProducts = await fetchProduct(apiUrlProduct);
       const allProductsLength = dataProducts.length;
       productListEl.innerHTML = renderProductListHTML(dataProducts, allProductsLength);
       linkEventListeners(productListEl, dataProducts);
     } else {
       // productCountAndSort.style.display = "flex";
-      const apiProductsCategory = `https://ecommerce-admin-master-tau.vercel.app/api/products?category=${selectedProductCategory}`;
+      const apiProductsCategory = `https://raywood-admin.vercel.app/api/products?category=${selectedProductCategory}`;
       const productByCategory = await fetchProduct(apiProductsCategory);
       const productByCategoryLength = productByCategory.length;
       productListEl.innerHTML = renderProductListHTML(productByCategory, productByCategoryLength);
@@ -189,7 +189,7 @@ const searchAndSortProducts = async function (sortOption, searchTerm) {
   const productListEl = document.querySelector(".products");
 
   try {
-    const apiUrlProduct = "https://ecommerce-admin-master-tau.vercel.app/api/products";
+    const apiUrlProduct = "https://raywood-admin.vercel.app/api/products";
     const data = await fetchProduct(apiUrlProduct);
 
     // გაფილტვრა საძებნი სიტყვით და კატეგორიით
@@ -262,7 +262,7 @@ const populateProductDetails = async function () {
   const selectedProductID = localStorage.getItem('selectedProductId');
   const productDetailsContainer = document.querySelector('#productDetailsContainer');
   try {
-    const apiUrlProduct = 'https://ecommerce-admin-master-tau.vercel.app/api/products';
+    const apiUrlProduct = 'https://raywood-admin.vercel.app/api/products';
     const data = await fetchProduct(apiUrlProduct);
     const selectedProduct = data.find(product => product._id === selectedProductID);
     const similarProducts = data.filter(product => product._id !== selectedProduct.id);
