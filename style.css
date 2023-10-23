@@ -2021,7 +2021,9 @@ a:active {
 .main-navigation > ul > li.current-menu-ancestor > a,
 .vertical-main-navigation > ul > li > a:hover,
 .vertical-main-navigation > ul > li.current-menu-item > a,
-.vertical-main-navigation > ul > li.current-menu-ancestor > a {
+.vertical-main-navigation > ul > li.current-menu-ancestor > a,
+.main-navigation > ul > li > a.current-menu-item,
+.vertical-main-navigation > ul > li > a.current-menu-item {
   color: var(--raywood-color-primary);
 }
 
@@ -2055,8 +2057,8 @@ a:active {
 
 /*Sub menu hover*/
 .main-navigation ul li li a:hover,
-.main-navigation ul ul li.current-menu-item > a,
-.main-navigation ul ul li.current-menu-ancestor > a {
+.main-navigation ul ul li > a.current-menu-item,
+.main-navigation ul ul li > a.current-menu-ancestor {
   color: var(--raywood-submenu-color-hover);
   background-color: var(--raywood-color-primary);
 }
